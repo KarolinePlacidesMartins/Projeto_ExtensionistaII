@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: green;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+}
+
+/* Página de ponto de coleta*/
+
+.container1 {
+  width: 720px;
+  padding: 20px;
+  margin: 20px auto 0 auto;
+  border-radius: 5px;
+}
+
+main {
+  width: 80hv;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+h1,
+h2 h3 {
+  padding: 5px 10px 5px 10px;
+  margin: 5px;
+}
+
+main h3 {
+  text-align: center;
+  margin-left: 15px;
+}
+
+.container1 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  font-size: 16px;
+  color: white;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  height: 32px;
+  margin: 10px 0;
+}
+
+.formulario input {
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.formulario select {
+  padding: 0 3px;
+}
+
+#botaoEnviar {
+  font-family: Roboto, sans-serif;
+  font-weight: 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #0066cc;
+  padding: 10px 30px;
+  border: solid #23c474 2px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  transition: 1000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+#botaoEnviar:hover {
+  transition: 1000ms;
+  padding: 10px 50px;
+  transform: translateY(-0px);
+  background-color: #179928;
+  color: #ffffff;
+  border: solid 2px #32383d;
+}
+
+@media (max-width: 540px) {
+  .formulario-pontos-de-coleta {
+    width: 100%;
+    flex-direction: column;
+  }
+}
