@@ -1,19 +1,21 @@
-//botao
-botao = document.getElementById("botaoEnviar");
-botao.addEventListener("click", validaFormulario);
+// Recupera o elemento do contador de acessos
+var accessCountElement = document.querySelector('.access-count');
 
-function validaFormulario() {
-  if (
-    document.getElementById("nomeEcoponto").value != "" &&
-    document.getElementById("diasColeta").value != "" &&
-    document.getElementById("cidade").value != "" &&
-    document.getElementById("bairro").value != "" &&
-    document.getElementById("cep").value != "" &&
-    document.getElementById("pontoReferencia").value != "" &&
-    document.getElementById("celular").value != ""
-  ) {
-    alert("Cadastro efetuado com sucesso");
-  } else {
-    alert("Por favor, preencha os campos obrigatórios!");
-  }
+// Verifica se já existe um valor de contador armazenado no localStorage
+var accessCount = localStorage.getItem('accessCount');
+
+// Se não houver valor no localStorage, começa com 0
+if (accessCount === null) {
+    accessCount = 0;
 }
+
+// Atualiza o contador exibido na página
+accessCountElement.textContent = accessCount;
+
+// Incrementa o contador quando a página é carregada
+accessCount++;
+accessCountElement.textContent = accessCount;
+
+// Armazena o novo valor no localStorage
+localStorage.setItem('accessCount', accessCount);
+
